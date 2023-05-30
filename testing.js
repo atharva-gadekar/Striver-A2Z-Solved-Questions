@@ -8322,6 +8322,8 @@ const json1 = {
 	credentials: true,
 };
 
+
+
 function getTopics() {
 const json2 = JSON.parse(document.getElementById("json2").value);
 
@@ -8401,3 +8403,5 @@ function createListStructure(data, parentElement) {
 
 createListStructure(updatedJson.data, stepsList);
 }
+
+document.getElementById("but").addEventListener("click", getTopics);
