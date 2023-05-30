@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3-Level List Structure</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.steps-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.steps-list > li {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.steps-list > li > ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.steps-list > li > ul > li {
+  margin-bottom: 10px;
+}
+
+.steps-list > li > ul > li > ul {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.steps-list > li > ul > li > ul > li {
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container textarea {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  height: 50vh;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
+
+
+    </style>
+</head>
+
+<body>
+   <div class="input-container">
+    <h2>
+        Copy the value of the "A2ZDSA_Sheet_Questions" key from the local storage and paste it here.
+    </h2>
+     <textarea id="json2"></textarea>
+    <button onclick="getTopics()">
+        Find Solved Questions
+    </button>
+     <h4>
+        
+            Don't know how to access local storage? Click on any of the link below to understand.
+            <br/>
+        <div class="links" style="text-align:center"
+        ">
+            <a href="https://stackoverflow.com/a/9404841">
+            Link 1
+        </a>
+        <br/>
+
+        <a href="https://developer.chrome.com/docs/devtools/storage/localstorage/">
+            Link 2
+        </a>
+        </div>
+    </h4>
+
+   </div>
+    <ul id="steps-list"></ul>
+
+    
+
+    <script src="testing.js"/>
+</body>
+</html>
